@@ -1,0 +1,10 @@
+n,k,q=[int(i)for i in input().split()]
+nn=[int(i)for i in input().split()]
+qq=[]
+for i in range(q):
+    qq.append(int(input()))
+ns=[]
+for i in range(len(nn)):
+    ns.insert((i+k)%n,nn[i])
+for i in qq:
+    print(ns[i])
