@@ -1,0 +1,7 @@
+p=(input().lower().split())
+p=set(''.join(p))
+#print(sorted(p))
+if len(p)!=26:
+    print("not pangram")
+else:
+    print("pangram")
