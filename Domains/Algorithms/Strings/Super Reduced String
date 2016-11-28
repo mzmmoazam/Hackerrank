@@ -1,0 +1,39 @@
+global ss
+ss=[]
+def defcall(s):
+    a=0
+    global ss
+    ss=[]
+    while len(s)!=0:
+        if len(s)==1:
+            ss.append(s[0])
+            break
+        if s[0]==s[1]:
+            s.pop(0)
+            s.pop(0)
+            continue       
+        if s[0]!=s[1]:
+            ss.append(s[0])
+            s.pop(0)
+            continue
+    if len(ss)==0:
+        print("Empty String")
+        exit()
+    if len(ss)==1:
+        print(''.join(ss))
+        exit()
+    #print(ss)
+    for i in range(len(ss)-1):
+        if ss[i]==ss[i+1]:
+            a=1
+    if a==1:
+        defcall(ss)
+        
+s=list(input())
+defcall(s)
+#print(ss)
+if len(ss)==0:
+    print("Empty String")
+else:
+    print(''.join(ss))
+
