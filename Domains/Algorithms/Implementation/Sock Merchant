@@ -1,0 +1,11 @@
+
+import sys
+from collections import  Counter
+
+n = int(input().strip())
+c = [int(c_temp) for c_temp in input().strip().split(' ')]
+c=Counter(c)
+ans=0
+for i in c:
+    ans+=c[i]//2
+print(ans)   
