@@ -1,0 +1,11 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+a,s1,s2= [],0,0
+for i in range(n):
+    s=list(input().split())
+    s1,s2=s1+int(s[i]),s2+int(s[n-1-i])
+print(abs(s1-s2))
