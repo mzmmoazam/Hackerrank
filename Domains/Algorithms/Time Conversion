@@ -1,0 +1,21 @@
+import sys 
+t=list(input())
+if 'A' in t:
+    a,b=int(t[0]),int(t[1])
+    x=a*10+b
+    if x==12:
+        x=0
+    t[0],t[1]=str(x//10),str(x%10)
+    print(''.join(t).strip("AM"))
+else:
+    x=0
+    a,b=int(t[0]),int(t[1])
+    if a==1 and b==2:
+        x=a*10+b
+    else:
+        x=int(a*10+b+12)    
+    if x>24:
+        x=24-x
+    t[0],t[1]=str(x//10),str(x%10)
+    
+    print(''.join(t).strip("PM"))
