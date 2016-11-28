@@ -1,0 +1,17 @@
+
+import sys
+
+
+n = int(input().strip())
+aa=list(input().split())
+c1,c2,c3=0,0,0
+for i in aa:
+    if int(i)==0:
+        c1=c1+1
+    elif int(i)>0:
+        c2=c2+1
+    else:
+        c3=c3+1
+print(c2/n )        
+print(c3/n)
+print(c1/n)
