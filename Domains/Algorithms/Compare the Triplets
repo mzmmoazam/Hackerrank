@@ -1,0 +1,14 @@
+a = input().split()
+b= input().split()
+aa,bb=0,0
+#print(a,b)
+for i in range(3):
+    if int(a[i])>int(b[i]):
+        #print(" aa=aa+1",a[i],b[i])
+        aa=aa+1
+    elif int(a[i])<int(b[i]):
+        bb=bb+1
+        #print(" bb=bb+1", a[i], b[i])
+    else:
+        pass
+print(aa,bb)
