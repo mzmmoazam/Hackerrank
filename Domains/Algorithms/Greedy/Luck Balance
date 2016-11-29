@@ -1,0 +1,17 @@
+n,k=[int(i)for i in input().split()]
+ans,nl=0,[]
+for _ in range(n):
+    l,i=[int(i)for i in input().split()]
+    if i==0:
+        ans+=l
+    else:
+        nl.append(l)
+#print(ans)
+nl.sort()
+while k<len(nl):
+    ans-=nl.pop(0)
+    #print(nl)
+ans+=sum(nl)
+print(ans)
+
+
