@@ -1,0 +1,11 @@
+_=int(input())
+m=input().split()
+m=list(set(m))
+if len(m)==2:
+    if int(m[0]) > int(m[1]):
+        print(m[1])
+    else:
+        print(m[0])
+else:
+    (m.sort(reverse = True,key=int))
+    print(m[1])
