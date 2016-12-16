@@ -1,0 +1,6 @@
+for _ in range(int(input())):
+    s=input()
+    cost=0
+    for i in range(len(s)//2):
+        cost+=abs(ord(s[i])-ord(s[len(s)-1-i]))
+    print(cost)
