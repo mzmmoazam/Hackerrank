@@ -1,0 +1,21 @@
+n=int(input())
+a=input().split()
+b=n-1
+d=a[b]
+while True:
+    #print(d)
+
+    if b == 0:
+        a[b]=d
+        print(' '.join(a))
+        break
+    if d<a[b-1]:
+        a[b]=a[b-1]
+        print(' '.join(a))
+        #print("if")
+
+        b=b-1
+    else:
+        a[b]=d
+        print(' '.join(a) )
+        break
