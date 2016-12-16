@@ -1,0 +1,18 @@
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+for a0 in range(n):
+    s = input().strip()
+    sa=""
+    sa+=s[0]
+    cost=1
+    while s!=sa:
+        if s[len(sa)] in sa:
+            sa=sa+s[len(sa)]
+        else:
+            cost+=1
+            sa=sa+s[len(sa)]
+    print(cost)
