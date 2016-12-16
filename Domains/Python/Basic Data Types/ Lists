@@ -1,0 +1,20 @@
+l=[]
+n=int(input())
+for i in range(n):
+    x=input().split()
+    if len(x)>1:
+        k=str(x[0])
+        x.remove(x[0])
+        z=','.join(x)
+        k="l."+k+"("+z+")"
+        eval(k)
+    elif str(x)=="['print']":
+        print(l)
+    else:
+        k = str(x[0])
+        x.remove(x[0])
+        z = ','.join(x)
+        k = "l." + k + "(" + z + ")"
+        eval(k)
+        
+    
