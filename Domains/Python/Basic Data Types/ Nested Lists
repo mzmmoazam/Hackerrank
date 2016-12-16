@@ -1,0 +1,28 @@
+n=int(input())
+import operator
+d={}
+for i in range(n):
+    u=input()
+    j=float(input())
+    if j in d:
+        k=d[j]
+        if type(k) is list:
+            k.append(u)
+            d[j]=k
+        else:
+            m=[]
+            m.append(k)
+            m.append(u)
+            d[j]=m
+    else:
+        d[j]=u
+
+
+l=d[sorted(d)[1]]
+#print(l)
+if type(l) is list:
+    for i in sorted(l):
+        print(i)
+else:
+    print(l)
+    
