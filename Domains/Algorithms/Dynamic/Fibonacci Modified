@@ -1,0 +1,9 @@
+a,b,n=input().split()
+a,b,n=int(a),int(b),int(n)
+(c)=0
+
+for i in range(n-2):
+    c=b*b +a
+    a,b=b,c
+    
+print(c)
